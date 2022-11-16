@@ -1,0 +1,77 @@
+html, body {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    display: grid;
+    background-color:#2c2137;
+    color: #edb4a1;
+    grid-template-areas:
+    "title"
+    "books"
+    "description";
+    grid-template-rows: 1fr 2fr 1.5fr;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+#title {
+    grid-area: title;
+    font-size: xx-large;
+}
+
+#book-swiper {
+    grid-area: books;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 30vh;
+    width: 100%;
+}
+
+#description {
+    grid-area: description;
+}
+
+#book-display {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 4vh;
+}
+
+#add-book {
+    aspect-ratio: 1/1;
+    font-size: 400px;
+    border-radius: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.highlighted {
+    background-color: #764462;
+    height: 500px;
+}
+
+.sidelighted {
+    background-color:  #a96868;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.swipe-button {
+    background: none;
+    border: none;
+    font-size: 120px;
+    color: #edb4a1;
+}
