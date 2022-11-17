@@ -19,6 +19,7 @@ body {
     justify-content: center;
     align-items: center;
     justify-items: center;
+    row-gap: 10vh;
 }
 
 #title {
@@ -100,9 +101,22 @@ input {
     font-family: 'Times New Roman', Times, serif;
 }
 
-#is-read {
+#is-read-container {
     font-size: 18px;
 }
+
+.book-card {
+    height: 50vh;
+    width: 10vh;
+    font-size: 60px;
+    background-color: #a96868 ;
+    text-align: center;
+    padding: 5vh 15vh;
+    position:absolute;
+    display: flex;
+    justify-content: center;
+}
+
 
 
 .swipe-button {

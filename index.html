@@ -12,17 +12,17 @@
     <div id="book-swiper">
         <button class="swipe-button" id="left-button"><</button>
         <div id="book-display">
-            <div class="add-book-card">
-                <div id="add-book" class="highlighted">+</div>
-                <form id="add-book-form">
+            <div id="add-book-card" class="card">
+                <div id="add-book">+</div>
+                <form id="add-book-form" onsubmit="return addBookToLibrary()">
                     <div id="form-container">
-                        <div id="form-title">Add new book </div>
+                        <div id="form-descriptor">Add new book </div>
                         <input class="input" type="text" id="form-title" placeholder="Title" required maxlength="100">
                         <input class="input" type="text" id="form-author" placeholder="Author" required maxlength="100">
                         <input class="input" type="number" id="form-pages" placeholder="Pages" required max="10000">
-                        <div id="is-read">
+                        <div id="is-read-container">
                             <label for="is-read">Have you read it?</label>
-                            <input class="checkbox" type="checkbox" id="is-read" required>
+                            <input class="checkbox" type="checkbox" id="is-read">
                         </div>
                         <button id="close-form-button" class="form-button">Cancel</button>
                         <button id="submit-form-button" class="form-button" is="submit-button" type="submit">Submit</button>
@@ -32,7 +32,7 @@
         </div>
         <button class="swipe-button" id="right-button">></button>
     </div>
-    <div id="description">description goes here</div>
-    <script src="script.js"></script>
+    <div id="description">Add book?</div>
 </body>
+<script src="script.js"></script>
 </html>
