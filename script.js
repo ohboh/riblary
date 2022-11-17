@@ -1,7 +1,6 @@
 let myLibrary = [0];
 var addBookCard = document.querySelector("#add-book-card");
-var addBookButton = document.querySelector("#add-book");
-var addBookForm = document.querySelector("add-book-form");
+var addBookButton = document.querySelector("#add-book");;
 var closeFormButton = document.querySelector("#close-form-button");
 var leftButton = document.querySelector("#left-button");
 var rightButton = document.querySelector("#right-button");
@@ -29,6 +28,7 @@ function addBookToLibrary() {
   return false;
 }
 
+toggleForm();
 addBookButton.addEventListener("click", toggleForm);
 closeFormButton.addEventListener("click", toggleForm);
 
@@ -40,8 +40,8 @@ function toggleForm() {
     leftButton.style.visibility = "hidden";
     rightButton.style.visibility = "hidden";
   }
-  else {
-    form.style.visibility = "hidden"
+  else{
+    form.style.visibility = "hidden";
     addBookButton.style.color = "#edb4a1";
     leftButton.style.visibility = "visible";
     rightButton.style.visibility = "visible";
@@ -72,7 +72,9 @@ function displayAddedBook(selectedBook) {
 
 var displayIndex = bookPrecedence;
 
-rightButton.addEventListener("click", function(){
+rightButton.addEventListener("click", rightButtonClick);
+
+function rightButtonClick(){
   displayIndex++;
   if (displayIndex > myLibrary.length-1) {
     displayIndex = 0;
@@ -85,9 +87,11 @@ rightButton.addEventListener("click", function(){
   else {
     document.querySelector("#book" + displayIndex.toString()).style.visibility = "visible";
   }
-});
+}
 
-leftButton.addEventListener("click", function(){
+leftButton.addEventListener("click", leftButtonClick);
+
+function leftButtonClick(){
   displayIndex--;
   if (displayIndex < 0) {
     displayIndex = myLibrary.length-1;
@@ -100,7 +104,7 @@ leftButton.addEventListener("click", function(){
   else {
     document.querySelector("#book" + displayIndex.toString()).style.visibility = "visible";
   }
-});
+}
 
 function updateDescription(element) {
   if (element == 0){
@@ -109,10 +113,10 @@ function updateDescription(element) {
   else {
     description.innerHTML = "The title of this book is " + element.title +". It has " + element.pageCount + " pages and is written by " + element. author + ". ";
     if (element.isRead){
-      description.innerHTML += "You have already read it."
+      description.innerHTML += "<span id='status-changer'>You have already read it. </span>"
     }
     else {
-      description.innerHTML += "You still haven't read it."
+      description.innerHTML += "<span id='status-changer'>You still haven't read it. </span>"
     }
   }
 }

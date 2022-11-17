@@ -37,11 +37,6 @@ body {
     position: absolute;
 }
 
-#description {
-    grid-area: description;
-    font-size: 30px;
-}
-
 #book-display {
     display: flex;
     flex-direction: row;
@@ -117,11 +112,20 @@ input {
     justify-content: center;
 }
 
-
-
 .swipe-button {
     background: none;
     border: none;
     font-size: 120px;
     color: #edb4a1;
+}
+
+#description {
+    grid-area: description;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 4vh;
+}
+
+#status-changer {
+    text-decoration: underline;
 }
