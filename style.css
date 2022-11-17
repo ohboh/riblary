@@ -23,7 +23,7 @@ body {
 
 #title {
     grid-area: title;
-    font-size: xx-large;
+    font-size: 100px;
 }
 
 #book-swiper {
@@ -31,12 +31,14 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    column-gap: 30vh;
+    column-gap: 20vh;
     width: 100%;
+    position: absolute;
 }
 
 #description {
     grid-area: description;
+    font-size: 30px;
 }
 
 #book-display {
@@ -44,7 +46,6 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    column-gap: 4vh;
 }
 
 #add-book {
@@ -54,20 +55,55 @@ body {
     display: grid;
     justify-content: center;
     align-items: center;
-}
-
-.highlighted {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
     background-color: #764462;
-    height: 500px;
+    height: 525px;
+    
 }
 
-.sidelighted {
-    background-color:  #a96868;
+#add-book-form {
+    visibility: hidden;
+    background-color: #764462;
+    color: #edb4a1;
+    position: absolute;
+    font-size: 25px;
+    border-radius: 100%;
+    aspect-ratio: 1/1;
+    padding: 2.8vh;
+    top: 0;
 }
 
-.hidden {
-    opacity: 0;
+#form-container {
+    margin-top: 35%;
+    margin-left: 1.5vh;
 }
+
+#add-book-form .show {
+    visibility: visible;
+}
+
+.form-button {
+    border: none;
+    background-color: #2c2137;
+    color: #edb4a1;
+    padding: 1vh 1.75vh;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+input {
+    border: none;
+    background-color: #2c2137;
+    color: #edb4a1;
+    padding: 1vh;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#is-read {
+    font-size: 18px;
+}
+
 
 .swipe-button {
     background: none;
